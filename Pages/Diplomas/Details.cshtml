@@ -1,0 +1,31 @@
+@page
+@model nscccoursemap_BryanSteiss.Pages.Diplomas.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Diploma</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Diploma.Title)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Diploma.Title)
+        </dd>
+        <dt class="col-sm-2">
+            <span>Duration in Years</span>
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Diploma.DiplomaYears!.Count)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Diploma?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
